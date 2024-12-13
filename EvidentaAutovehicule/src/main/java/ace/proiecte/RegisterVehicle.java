@@ -1,12 +1,14 @@
 package ace.proiecte;
 
-public class Inmatriculare {
+import java.io.Serializable;
+
+public class RegisterVehicle implements Serializable {
     private String numarInmatriculare;
     private String dataInmatricularii;
-    private NumarInmatriculareGenerator numarInmatriculareGenerator = new NumarInmatriculareGenerator();
+    private transient RegistrationNumberGenerator registrationNumberGenerator = new RegistrationNumberGenerator(); // transient pentru a nu serializa
 
-    public Inmatriculare( String dataInmatricularii) {
-        this.numarInmatriculare = numarInmatriculareGenerator.genereazaNumarUnic();
+    public RegisterVehicle(String dataInmatricularii) {
+        this.numarInmatriculare = registrationNumberGenerator.genereazaNumarUnic();
         this.dataInmatricularii = dataInmatricularii;
     }
 
@@ -26,4 +28,3 @@ public class Inmatriculare {
                 '}';
     }
 }
-

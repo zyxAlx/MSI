@@ -1,32 +1,34 @@
 package ace.proiecte;
 
-public class Autovehicul {
+import java.io.Serializable;
+
+public class Vehicle implements Serializable {
     private String tip;
     private String marca;
     private int cilindree;
     private String culoare;
     private RevizieTehnica revizieTehnica;
     private Proprietar proprietar;
-    private Inmatriculare inmatriculare;
+    private RegisterVehicle registerVehicle;
 
-
-
-    public Autovehicul(String tip, String marca, int cilindree, String culoare, Proprietar proprietar, Inmatriculare inmatriculare) {
+    public Vehicle(String tip, String marca, int cilindree, String culoare, Proprietar proprietar, RegisterVehicle registerVehicle) {
         this.tip = tip;
         this.marca = marca;
         this.cilindree = cilindree;
         this.culoare = culoare;
-        this.proprietar=proprietar;
-        this.inmatriculare= inmatriculare;
-        this.revizieTehnica = null;  // la fabricare  are revizie tehnică
-    }
-    public Inmatriculare getInmatriculare() {
-        return inmatriculare;
+        this.proprietar = proprietar;
+        this.registerVehicle = registerVehicle;
+        this.revizieTehnica = null; // la fabricare, nu are revizie tehnica
     }
 
-    public void setInmatriculare(Inmatriculare inmatriculare) {
-        this.inmatriculare = inmatriculare;
+    public RegisterVehicle getInmatriculare() {
+        return registerVehicle;
     }
+
+    public void setInmatriculare(RegisterVehicle registerVehicle) {
+        this.registerVehicle = registerVehicle;
+    }
+
     public Proprietar getProprietar() {
         return proprietar;
     }
@@ -42,6 +44,7 @@ public class Autovehicul {
     public RevizieTehnica getRevizieTehnica() {
         return revizieTehnica;
     }
+
     public String getTip() {
         return tip;
     }

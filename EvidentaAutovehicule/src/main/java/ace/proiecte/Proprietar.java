@@ -1,6 +1,8 @@
 package ace.proiecte;
 
-public class Proprietar {
+import java.io.Serializable;
+
+public class Proprietar implements Serializable {
     private String nume;
     private String prenume;
     private String cnp;
@@ -11,7 +13,6 @@ public class Proprietar {
         this.cnp = cnp;
     }
 
-    // Getters și setters
     public String getNume() {
         return nume;
     }

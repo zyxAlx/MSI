@@ -3,11 +3,11 @@ package ace.proiecte;
 import java.util.Iterator;
 import java.util.List;
 
-public class AutovehiculIterator implements Iterator<Autovehicul> {
-    private List<Autovehicul> autovehicule;
+public class VehicleIterator implements Iterator<Vehicle> {
+    private List<Vehicle> autovehicule;
     private int pozitie;
 
-    public AutovehiculIterator(List<Autovehicul> autovehicule) {
+    public VehicleIterator(List<Vehicle> autovehicule) {
         this.autovehicule = autovehicule;
         this.pozitie = 0;
     }
@@ -18,7 +18,7 @@ public class AutovehiculIterator implements Iterator<Autovehicul> {
     }
 
     @Override
-    public Autovehicul next() {
+    public Vehicle next() {
         return autovehicule.get(pozitie++);
     }
 }

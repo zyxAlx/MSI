@@ -2,6 +2,10 @@ package ace.proiecte;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // Creează un obiect GestorAutovehicule
+        VehicleAdministrator admin = new VehicleAdministrator();
+
+        // Creează și deschide interfața grafică
+        new GraphicalInterface(admin);
     }
 }

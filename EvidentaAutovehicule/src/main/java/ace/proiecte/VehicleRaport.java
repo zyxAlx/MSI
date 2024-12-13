@@ -2,10 +2,10 @@ package ace.proiecte;
 
 import java.util.List;
 
-public class RaportAutovehicule {
-    public static void genereazaRaport(List<Autovehicul> autovehicule) {
+public class VehicleRaport {
+    public static void genereazaRaport(List<Vehicle> autovehicule) {
         System.out.println("Raport autovehicule înmatriculate:");
-        for (Autovehicul auto : autovehicule) {
+        for (Vehicle auto : autovehicule) {
             System.out.println(auto);
         }
     }
